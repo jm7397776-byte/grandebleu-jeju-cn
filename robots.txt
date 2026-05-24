@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jm7397776-byte.github.io/grandebleu-jeju-cn/sitemap.xml
