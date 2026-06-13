@@ -1,0 +1,25 @@
+name: Auto-request Google indexing
+
+# Submits the blog's sitemap URLs to the Google Indexing API once a day,
+# so new posts get picked up without manually clicking "Request indexing".
+# Does nothing (exits cleanly) until the GOOGLE_INDEXING_SA_JSON secret is set.
+
+on:
+  schedule:
+    - cron: "30 9 * * *"   # daily 09:30 UTC (~18:30 KST)
+  workflow_dispatch: {}      # allow manual run from the Actions tab
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet google-auth requests
+      - name: Request indexing for new posts
+        env:
+          GOOGLE_INDEXING_SA_JSON: ${{ secrets.GOOGLE_INDEXING_SA_JSON }}
+          BLOG_SITEMAP: "https://jejugrandebleuyacht.blogspot.com/sitemap.xml"
+        run: python scripts/google_indexing.py
