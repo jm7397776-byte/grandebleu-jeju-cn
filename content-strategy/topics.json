@@ -1,0 +1,109 @@
+{
+  "_comment": "Machine-readable topic queue for the daily generator. Each item is ONE distinct search intent — generate one post per item, in any language. Cycle clusters so the same intent does not repeat on consecutive days. See README.md for the writing rules.",
+  "rules": {
+    "one_intent_per_post": true,
+    "h1_is_a_real_search_query": true,
+    "shared_selling_points_only_when_relevant": true,
+    "unique_faq_per_post": 3,
+    "self_canonical": true,
+    "internal_links_to_other_intents": 2
+  },
+  "clusters": [
+    {
+      "id": "booking_price",
+      "label": "예약·가격 / Booking & Price",
+      "topics": [
+        {"slug": "yacht-price-luxury-vs-sunset", "query": "제주 그랑블루 요트 가격", "title": "그랑블루 요트 가격 총정리: 럭셔리 vs 선셋 투어"},
+        {"slug": "klook-vs-onsite-booking", "query": "제주 요트 클룩 예약", "title": "클룩 vs 현장 예약, 어디가 더 쌀까?"},
+        {"slug": "peak-offpeak-discount", "query": "제주 요트 할인 시즌", "title": "성수기·비수기 가격과 할인 시즌"},
+        {"slug": "refund-cancellation-policy", "query": "제주 요트 환불 규정", "title": "환불·취소·날씨 변경 규정 완벽 정리"},
+        {"slug": "group-charter-quote", "query": "제주 요트 전세 견적", "title": "단체·전세 차터 견적 받는 법 (최대 91명)"},
+        {"slug": "child-infant-pricing", "query": "제주 요트 어린이 요금", "title": "어린이·유아 요금과 무료 기준"},
+        {"slug": "same-day-booking", "query": "제주 요트 당일 예약", "title": "당일 예약 가능할까? 마감 시간 안내"},
+        {"slug": "couple-package-vs-standard", "query": "제주 요트 커플 패키지", "title": "커플 패키지 vs 일반 탑승 비교"},
+        {"slug": "booking-channels-compared", "query": "제주 요트 예약 사이트", "title": "클룩·KKday·네이버 채널별 장단점"},
+        {"slug": "gift-voucher", "query": "제주 요트 선물", "title": "바우처·기프트카드로 선물하기"}
+      ]
+    },
+    {
+      "id": "howto_tips",
+      "label": "방법·팁 / How-to & Tips",
+      "topics": [
+        {"slug": "how-to-get-to-daepo-port", "query": "대포항 가는 법", "title": "대포항 가는 법: 공항·서귀포에서 (차/버스/택시)"},
+        {"slug": "daepo-port-parking", "query": "대포항 주차", "title": "대포항 주차 완벽 가이드"},
+        {"slug": "seasickness-catamaran", "query": "제주 요트 멀미", "title": "멀미 걱정? 쌍동선이 덜 흔들리는 이유"},
+        {"slug": "family-with-kids-checklist", "query": "제주 요트 아이", "title": "아이랑 타도 될까? 가족 탑승 체크리스트"},
+        {"slug": "what-to-wear-bring", "query": "제주 요트 복장", "title": "요트 탈 때 복장·준비물 (계절별)"},
+        {"slug": "best-sunset-time", "query": "제주 일몰 시간", "title": "가장 예쁜 노을 시간대 고르는 법 (월별 일몰)"},
+        {"slug": "photo-tips-on-deck", "query": "제주 요트 사진", "title": "배 위에서 인생샷 찍는 5가지 구도"},
+        {"slug": "sea-fishing-beginner", "query": "제주 바다낚시", "title": "바다낚시 초보 가이드: 잡히는 물고기"},
+        {"slug": "rainy-day-plan-b", "query": "제주 요트 우천", "title": "우천 시 플랜 B와 진행 여부 판단"},
+        {"slug": "things-to-prepare", "query": "제주 요트 준비물", "title": "멀미약·선크림 등 미리 챙기면 좋은 것"}
+      ]
+    },
+    {
+      "id": "local",
+      "label": "지역 연계 / Local",
+      "topics": [
+        {"slug": "jusangjeolli-yacht-halfday", "query": "주상절리 요트", "title": "주상절리 + 요트, 제주 남부 반나절 코스"},
+        {"slug": "daepo-port-restaurants", "query": "대포항 맛집", "title": "대포항 근처 맛집 BEST (탑승 전후)"},
+        {"slug": "jungmun-yacht-dayplan", "query": "중문 요트 코스", "title": "중문 관광단지 + 요트 1일 코스"},
+        {"slug": "seogwipo-cafes", "query": "서귀포 카페", "title": "서귀포 카페 추천 (요트 타고 난 뒤)"},
+        {"slug": "elephant-rock-sea-caves", "query": "코끼리바위 제주", "title": "코끼리바위·월평 해식동굴, 바다에서만 보이는 절경"},
+        {"slug": "south-jeju-rainy-alt", "query": "제주 남부 비올때", "title": "제주 남부 우천 시 실내 대안 코스"},
+        {"slug": "airport-to-daepo-drive", "query": "제주공항 대포항 드라이브", "title": "제주공항 → 대포항 렌터카 드라이브 코스"},
+        {"slug": "3night4day-with-yacht", "query": "제주 3박4일 코스", "title": "제주 3박4일 일정에 요트 끼워넣기"},
+        {"slug": "honeymoon-south-jeju-route", "query": "제주 신혼여행 코스", "title": "신혼여행 제주 남부 동선 추천"},
+        {"slug": "jeju-sunset-spots", "query": "제주 노을 명소", "title": "제주 노을 명소 TOP, 그리고 왜 배 위가 최고인지"}
+      ]
+    },
+    {
+      "id": "stories",
+      "label": "후기·스토리 / Stories",
+      "topics": [
+        {"slug": "proposal-story", "query": "제주 프러포즈 후기", "title": "실제 프러포즈 후기: 노을 위에서 예스"},
+        {"slug": "family-of-four-story", "query": "제주 가족 요트 후기", "title": "가족 4인 탑승기: 부모님 모시고"},
+        {"slug": "corporate-91-story", "query": "제주 기업 단체 요트", "title": "기업 단체 91명 전세 후기"},
+        {"slug": "with-foreign-friends", "query": "제주 외국인 요트", "title": "외국인 친구와 함께한 제주 요트"},
+        {"slug": "rainy-day-story", "query": "제주 요트 비오는날 후기", "title": "비 오는 날 탑승했더니 생긴 일"},
+        {"slug": "solo-trip-story", "query": "제주 혼자 여행 요트", "title": "혼자 떠난 제주, 요트 위 1시간"},
+        {"slug": "100k-guests-reviews", "query": "그랑블루 요트 후기", "title": "누적 10만 명이 탄 배: 후기 모음"},
+        {"slug": "why-5star-hotels", "query": "제주 호텔 추천 요트", "title": "5성급 호텔이 추천하는 이유"},
+        {"slug": "birthday-charter-story", "query": "제주 생일 요트", "title": "생일 서프라이즈 차터 후기"},
+        {"slug": "honeymoon-sailing-story", "query": "제주 허니문 요트", "title": "외국 커플의 허니문 항해기"}
+      ]
+    },
+    {
+      "id": "comparison",
+      "label": "비교·대안 / Comparison",
+      "topics": [
+        {"slug": "jeju-yacht-companies-compared", "query": "제주 요트 업체 비교", "title": "제주 요트 업체 비교: 무엇을 봐야 하나"},
+        {"slug": "motorboat-vs-catamaran", "query": "카타마란 차이", "title": "동력보트 vs 세일링 카타마란 차이"},
+        {"slug": "yacht-vs-submarine-vs-cruise", "query": "제주 바다 체험 비교", "title": "요트 vs 잠수함 vs 유람선 비교"},
+        {"slug": "free-travel-vs-package", "query": "제주 자유여행 패키지", "title": "자유여행 vs 패키지, 요트는 어디에?"},
+        {"slug": "why-korea-only-certified", "query": "한국 유일 인증 요트", "title": "그랑블루가 '한국 유일 인증'인 이유"},
+        {"slug": "60min-vs-charter", "query": "제주 요트 전세 시간", "title": "60분 코스 vs 전세 장시간, 뭐가 맞을까"},
+        {"slug": "east-vs-south-jeju-sea", "query": "제주 동부 남부 바다", "title": "제주 동부 vs 남부 바다 체험 비교"},
+        {"slug": "yacht-vs-crowded-spots", "query": "제주 한적한 명소", "title": "붐비는 명소 대신 요트를 택하는 이유"},
+        {"slug": "jeju-activity-value-ranking", "query": "제주 가성비 액티비티", "title": "가성비로 따져본 제주 액티비티 순위"},
+        {"slug": "is-luxury-tour-worth-it", "query": "그랑블루 럭셔리 투어", "title": "럭셔리 투어가 값어치 하는지 솔직 분석"}
+      ]
+    },
+    {
+      "id": "seasonal",
+      "label": "시즌·이벤트 / Seasonal",
+      "topics": [
+        {"slug": "cherry-blossom-season", "query": "제주 벚꽃 요트", "title": "벚꽃 시즌 제주, 바다에서 봄 맞이"},
+        {"slug": "summer-yacht-escape", "query": "제주 여름 요트", "title": "여름 제주 요트: 바다 위 피서"},
+        {"slug": "autumn-foliage-sailing", "query": "제주 가을 요트", "title": "가을 단풍철 항해의 매력"},
+        {"slug": "warm-winter-south-jeju", "query": "제주 겨울 요트", "title": "겨울에도 따뜻한 제주 남부 바다"},
+        {"slug": "new-year-sunset", "query": "제주 연말 요트", "title": "연말·새해 일몰 항해"},
+        {"slug": "valentine-anniversary", "query": "제주 기념일 요트", "title": "발렌타인·기념일 커플 항해"},
+        {"slug": "childrens-day-family", "query": "제주 어린이날 요트", "title": "어린이날·가정의 달 가족 항해"},
+        {"slug": "summer-peak-booking-timing", "query": "제주 여름 요트 예약", "title": "여름 성수기 예약 타이밍"},
+        {"slug": "christmas-charter", "query": "제주 크리스마스 요트", "title": "크리스마스 선셋 차터"},
+        {"slug": "festival-combo", "query": "제주 축제 요트", "title": "제주 지역 축제·이벤트와 묶어 즐기기"}
+      ]
+    }
+  ]
+}
